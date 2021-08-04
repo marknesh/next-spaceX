@@ -63,7 +63,7 @@ function Map({spaceXPads}) {
  
  <MarkerClusterGroup>
   {spaceXPads.map((pad)=>(
-        <Marker position={[pad.location.latitude, pad.location.longitude]}>
+        <Marker key={pad.id} position={[pad.location.latitude, pad.location.longitude]}>
         <Popup>
          {pad.full_name}<br></br>{pad.location.region} <br /><p>status: {pad.status}</p>
         </Popup>
